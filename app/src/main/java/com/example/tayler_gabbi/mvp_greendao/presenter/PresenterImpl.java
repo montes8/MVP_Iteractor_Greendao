@@ -1,43 +1,53 @@
 package com.example.tayler_gabbi.mvp_greendao.presenter;
 
-import android.text.TextUtils;
-
-import com.example.tayler_gabbi.mvp_greendao.database.Usuario;
 import com.example.tayler_gabbi.mvp_greendao.database.UsuarioDao;
+import com.example.tayler_gabbi.mvp_greendao.interactores.LoginInteractorImpl;
+import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginInteractor;
 import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginPresenter;
 import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginView;
+import com.example.tayler_gabbi.mvp_greendao.interfaces.OnLoginFinishListener;
 
-import java.util.ArrayList;
 
-public class PresenterImpl implements LoginPresenter {
+public class PresenterImpl implements LoginPresenter ,OnLoginFinishListener{
 
     private LoginView loginView;
+    private LoginInteractor loginInteractor;
 
     public PresenterImpl(LoginView loginView) {
         this.loginView = loginView;
+        this.loginInteractor = new LoginInteractorImpl();
     }
 
     @Override
-    public void perfomLogin( String userName, String password, UsuarioDao usuarioDao) {
+    public void usuarioSucces(String user, String password, UsuarioDao usuarioDao) {
+        if (loginView != null){
 
-        if(TextUtils.isEmpty(userName) || TextUtils.isEmpty(password)){
+        }
+        loginInteractor.validarUser(user,password,usuarioDao);
 
-            loginView.loginValidations();
-
-        }else {
-
-            ArrayList<Usuario> listaUsuario = (ArrayList<Usuario>) usuarioDao.queryBuilder().where(UsuarioDao.Properties.Usuario.eq(userName)).list();
-
-                    if(listaUsuario!= null && listaUsuario.size() > 0) {
-
-                        loginView.loginSuccess();
-
-                    } else {
-
-                        loginView.loginError();
-                    }
-                }
     }
 
+    @Override
+    public void loginValidationsError() {
 
+        if (loginView != null){
+            loginView.loginValidations();
+        }
+
+    }
+
+    @Override
+    public void loginSuccessExist() {
+        if (loginView != null){
+           loginView.loginSuccess();
+        }
+    }
+
+    @Override
+    public void loginUserError() {
+        if (loginView != null){
+            loginView.loginError();
+        }
+
+    }
 }

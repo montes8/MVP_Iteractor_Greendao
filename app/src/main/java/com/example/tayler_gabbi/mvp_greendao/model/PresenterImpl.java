@@ -1,14 +1,14 @@
-package com.example.tayler_gabbi.mvp_greendao.presenter;
+package com.example.tayler_gabbi.mvp_greendao.model;
 
 import com.example.tayler_gabbi.mvp_greendao.database.UsuarioDao;
 import com.example.tayler_gabbi.mvp_greendao.interactores.LoginInteractorImpl;
 import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginInteractor;
-import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginPresenter;
-import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginView;
+import com.example.tayler_gabbi.mvp_greendao.presenter.LoginPresenter;
+import com.example.tayler_gabbi.mvp_greendao.view.LoginView;
 import com.example.tayler_gabbi.mvp_greendao.interfaces.OnLoginFinishListener;
 
 
-public class PresenterImpl implements LoginPresenter ,OnLoginFinishListener{
+public class PresenterImpl implements LoginPresenter,OnLoginFinishListener{
 
     private LoginView loginView;
     private LoginInteractor loginInteractor;

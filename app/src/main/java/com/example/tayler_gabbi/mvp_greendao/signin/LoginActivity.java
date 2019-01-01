@@ -1,4 +1,4 @@
-package com.example.tayler_gabbi.mvp_greendao;
+package com.example.tayler_gabbi.mvp_greendao.signin;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.tayler_gabbi.mvp_greendao.DemoApplication;
+import com.example.tayler_gabbi.mvp_greendao.R;
 import com.example.tayler_gabbi.mvp_greendao.database.UsuarioDao;
-import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginPresenter;
-import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginView;
-import com.example.tayler_gabbi.mvp_greendao.presenter.PresenterImpl;
+import com.example.tayler_gabbi.mvp_greendao.presenter.LoginPresenter;
+import com.example.tayler_gabbi.mvp_greendao.view.LoginView;
+import com.example.tayler_gabbi.mvp_greendao.model.PresenterImpl;
 
 public class LoginActivity extends AppCompatActivity implements LoginView{
 

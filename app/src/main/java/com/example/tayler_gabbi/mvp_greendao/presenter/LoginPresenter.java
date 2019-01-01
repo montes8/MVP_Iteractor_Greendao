@@ -1,4 +1,4 @@
-package com.example.tayler_gabbi.mvp_greendao.interfaces;
+package com.example.tayler_gabbi.mvp_greendao.presenter;
 
 
 import com.example.tayler_gabbi.mvp_greendao.database.UsuarioDao;

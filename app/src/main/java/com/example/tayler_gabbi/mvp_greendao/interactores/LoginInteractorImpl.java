@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import com.example.tayler_gabbi.mvp_greendao.database.Usuario;
 import com.example.tayler_gabbi.mvp_greendao.database.UsuarioDao;
 import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginInteractor;
-import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginPresenter;
+import com.example.tayler_gabbi.mvp_greendao.presenter.LoginPresenter;
 import com.example.tayler_gabbi.mvp_greendao.interfaces.OnLoginFinishListener;
 
 import java.util.ArrayList;

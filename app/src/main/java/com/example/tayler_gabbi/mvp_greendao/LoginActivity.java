@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         editUser = findViewById(R.id.edit_usuario);
         editPass = findViewById(R.id.edit_pasword);
         logearse = findViewById(R.id.button_ingresar);
-        presenter = new PresenterImpl();
+        presenter = new PresenterImpl(this);
 
         usuarioDao = ((DemoApplication)getApplication()).getDaoSession().getUsuarioDao();
 

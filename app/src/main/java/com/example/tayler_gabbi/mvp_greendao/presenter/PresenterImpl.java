@@ -23,7 +23,7 @@ public class PresenterImpl implements LoginPresenter ,OnLoginFinishListener{
         if (loginView != null){
 
         }
-        loginInteractor.validarUser(user,password,usuarioDao);
+        loginInteractor.validarUser(user,password,usuarioDao,this);
 
     }
 

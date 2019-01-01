@@ -1,11 +1,11 @@
-package com.example.tayler_gabbi.mvp_greendao.model;
+package com.example.tayler_gabbi.mvp_greendao.presenter;
 
 import android.text.TextUtils;
 
 import com.example.tayler_gabbi.mvp_greendao.database.Usuario;
 import com.example.tayler_gabbi.mvp_greendao.database.UsuarioDao;
-import com.example.tayler_gabbi.mvp_greendao.presenter.LoginPresenter;
-import com.example.tayler_gabbi.mvp_greendao.view.LoginView;
+import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginPresenter;
+import com.example.tayler_gabbi.mvp_greendao.interfaces.LoginView;
 
 import java.util.ArrayList;
 

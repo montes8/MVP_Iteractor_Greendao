@@ -1,4 +1,4 @@
-package com.example.tayler_gabbi.mvp_greendao.view;
+package com.example.tayler_gabbi.mvp_greendao.interfaces;
 
 public interface LoginView {
 
